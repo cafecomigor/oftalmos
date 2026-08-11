@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oftalmos Day Hospital — Cronogramas de Conteúdo</title>
+<style>
+  :root {
+    --ink: #12153A;
+    --blue: #3640F5;
+    --blue-deep: #262FC7;
+    --blue-tint: #EAEBFD;
+    --paper: #FAFAFE;
+    --surface: #FFFFFF;
+    --border: #E3E4F5;
+    --text-soft: #565B82;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0; background: var(--paper); color: var(--ink);
+    font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .serif { font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; }
+  .wrap { max-width: 780px; margin: 0 auto; padding: 0 1.5rem; }
+
+  .hero { background: var(--ink); color: #F1F2FD; padding: 4.5rem 0 3.5rem; }
+  .mark { display: flex; align-items: center; gap: 1.6rem; margin-bottom: 2.4rem; }
+  .wordmark .name { font-weight: 800; font-size: 1.7rem; color: #FFFFFF; letter-spacing: -0.01em; }
+  .wordmark .sub {
+    font-family: "Iowan Old Style", Palatino, Georgia, serif;
+    font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--blue); margin-top: 0.35rem;
+  }
+  .hero .eyebrow {
+    font-family: "Iowan Old Style", Palatino, Georgia, serif;
+    font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--blue); margin: 0 0 0.9rem;
+  }
+  .hero h1 { font-family: "Iowan Old Style", Palatino, Georgia, serif; font-size: clamp(1.7rem, 4vw, 2.3rem); color: #fff; margin: 0; }
+  .hero p.desc { color: #C4C7F9; font-size: 1rem; margin-top: 0.9rem; max-width: 52ch; line-height: 1.6; }
+
+  section.list { padding: 3rem 0 5rem; }
+  section.list h2 {
+    font-family: "Iowan Old Style", Palatino, Georgia, serif;
+    font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--blue-deep); border-bottom: 1px solid var(--border);
+    padding-bottom: 0.9rem; margin: 0 0 1.4rem;
+  }
+  a.month-card {
+    display: block; background: var(--surface); border: 1px solid var(--border);
+    border-left: 3px solid var(--blue); border-radius: 4px;
+    padding: 1.4rem 1.7rem; margin-bottom: 1rem; text-decoration: none; color: var(--ink);
+  }
+  a.month-card:hover { border-left-color: var(--blue-deep); background: var(--blue-tint); }
+  a.month-card .period { font-family: "Iowan Old Style", Palatino, Georgia, serif; font-weight: 600; font-size: 1.05rem; }
+  a.month-card .theme { color: var(--text-soft); font-size: 0.92rem; margin-top: 0.3rem; }
+
+  footer { color: var(--text-soft); font-size: 0.85rem; text-align: center; padding-bottom: 3rem; }
+</style>
+</head>
+<body>
+  <div class="hero">
+    <div class="wrap">
+      <div class="mark">
+        <svg width="56" height="56" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <ellipse cx="32" cy="32" rx="26" ry="14" stroke="#3640F5" stroke-width="2"/>
+          <circle cx="32" cy="32" r="10" stroke="#3640F5" stroke-width="2"/>
+          <circle cx="32" cy="32" r="3.2" fill="#3640F5"/>
+          <line x1="32" y1="4" x2="32" y2="20" stroke="#3640F5" stroke-width="2"/>
+          <line x1="32" y1="44" x2="32" y2="60" stroke="#3640F5" stroke-width="2"/>
+          <line x1="4" y1="32" x2="20" y2="32" stroke="#3640F5" stroke-width="2"/>
+          <line x1="44" y1="32" x2="60" y2="32" stroke="#3640F5" stroke-width="2"/>
+        </svg>
+        <div class="wordmark">
+          <div class="name">Oftalmos Day Hospital</div>
+          <div class="sub">Piracicaba · São Paulo</div>
+        </div>
+      </div>
+      <p class="eyebrow">Marketing de conteúdo</p>
+      <h1>Cronogramas de conteúdo mensais</h1>
+      <p class="desc">Planejamento de postagens educativas para redes sociais, mês a mês.</p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <section class="list">
+      <h2>Meses disponíveis</h2>
+      <a class="month-card" href="relatorios/2026-08-agosto.html">
+        <div class="period">Agosto — Setembro 2026</div>
+        <div class="theme">Tema: Doenças de Retina · 8 vídeos + 4 fotos</div>
+      </a>
+    </section>
+  </div>
+
+  <footer>Oftalmos Day Hospital · Piracicaba/SP</footer>
+</body>
+</html>

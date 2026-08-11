@@ -1,0 +1,314 @@
+<title>Oftalmos Day Hospital — Cronograma de Conteúdo · Agosto/Setembro 2026</title>
+<style>
+  :root {
+    --ink: #12153A;
+    --ink-2: #1B1F55;
+    --blue: #3640F5;
+    --blue-deep: #262FC7;
+    --blue-tint: #EAEBFD;
+    --paper: #FAFAFE;
+    --surface: #FFFFFF;
+    --border: #E3E4F5;
+    --text-soft: #565B82;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0; background: var(--paper); color: var(--ink);
+    font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  body { padding-bottom: 5rem; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 1.5rem; }
+
+  h1, h2, h3, .serif {
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    text-wrap: balance; margin: 0;
+  }
+
+  .hero {
+    background: var(--ink);
+    color: #F1F2FD;
+    padding: 4.5rem 0 3.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero .wrap { position: relative; z-index: 1; }
+  .mark { display: flex; align-items: center; gap: 1.6rem; margin-bottom: 2.8rem; }
+  .mark svg { flex: none; }
+  .wordmark { line-height: 1; }
+  .wordmark .name {
+    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-weight: 800; font-size: 1.7rem; letter-spacing: -0.01em; color: #FFFFFF;
+  }
+  .wordmark .sub {
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--blue); margin-top: 0.35rem;
+  }
+
+  .hero .eyebrow {
+    font-family: "Iowan Old Style", Palatino, Georgia, serif;
+    font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--blue); margin: 0 0 0.9rem;
+  }
+  .hero h1 { font-size: clamp(1.8rem, 4.4vw, 2.7rem); color: #FFFFFF; line-height: 1.18; max-width: 22ch; }
+  .hero .desc { color: #C4C7F9; font-size: 1.02rem; margin-top: 0.9rem; max-width: 52ch; line-height: 1.6; }
+
+  .meta-strip {
+    display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 2.2rem;
+  }
+  .meta-strip .pill {
+    font-size: 0.8rem; padding: 0.4rem 0.85rem; border-radius: 999px;
+    background: rgba(54,64,245,0.16); border: 1px solid rgba(54,64,245,0.42);
+    color: #DCDEFB;
+  }
+  .meta-strip .pill b { color: #FFFFFF; }
+
+  section.intro { padding: 3rem 0 1rem; }
+  section.intro p {
+    color: var(--text-soft); font-size: 1.02rem; line-height: 1.7; max-width: 62ch;
+  }
+
+  section.schedule { padding: 1.5rem 0 3rem; }
+  .month-label {
+    font-family: "Iowan Old Style", Palatino, Georgia, serif;
+    font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--blue-deep); border-bottom: 1px solid var(--border);
+    padding-bottom: 0.9rem; margin-bottom: 1.6rem;
+  }
+
+  article.post {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--blue);
+    border-radius: 4px;
+    padding: 1.6rem 1.8rem;
+    margin-bottom: 1.1rem;
+  }
+  .post-top {
+    display: flex; align-items: baseline; gap: 0.9rem; flex-wrap: wrap;
+    margin-bottom: 0.7rem;
+  }
+  .date-badge {
+    font-family: "Iowan Old Style", Palatino, Georgia, serif;
+    font-weight: 600; font-size: 0.92rem; color: var(--ink);
+    background: var(--blue-tint); padding: 0.2rem 0.65rem; border-radius: 4px;
+    white-space: nowrap;
+  }
+  .weekday { font-size: 0.78rem; color: var(--text-soft); letter-spacing: 0.03em; }
+  .type-badge {
+    font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 0.22rem 0.6rem; border-radius: 4px; margin-left: auto;
+  }
+  .type-badge.video { background: var(--ink); color: #E9EAFC; }
+  .type-badge.foto { background: transparent; color: var(--blue-deep); border: 1px solid var(--blue); }
+  .post h3 { font-size: 1.18rem; color: var(--ink); margin-top: 0.3rem; }
+  .legend {
+    color: var(--text-soft); font-size: 0.96rem; line-height: 1.7;
+    margin-top: 0.8rem; max-width: 66ch; white-space: pre-line;
+  }
+  .legend .tags { display: block; margin-top: 0.6rem; color: var(--blue-deep); font-size: 0.9rem; }
+
+  footer.doc-foot {
+    padding-top: 2.2rem; margin-top: 1rem; border-top: 1px solid var(--border);
+    color: var(--text-soft); font-size: 0.85rem; line-height: 1.6;
+  }
+  footer.doc-foot .brandline {
+    display: flex; align-items: center; gap: 0.6rem; margin-top: 1rem;
+    font-family: "Iowan Old Style", Palatino, Georgia, serif; color: var(--ink-2);
+    font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;
+  }
+  footer.doc-foot .brandline .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--blue); }
+
+  @media (max-width: 640px) {
+    .hero { padding: 3.2rem 0 2.6rem; }
+    article.post { padding: 1.3rem 1.2rem; }
+    .mark { gap: 1rem; }
+    .mark svg { width: 52px; height: 52px; }
+  }
+</style>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="mark">
+      <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <ellipse cx="32" cy="32" rx="26" ry="14" stroke="#3640F5" stroke-width="2"/>
+        <circle cx="32" cy="32" r="10" stroke="#3640F5" stroke-width="2"/>
+        <circle cx="32" cy="32" r="3.2" fill="#3640F5"/>
+        <line x1="32" y1="4" x2="32" y2="20" stroke="#3640F5" stroke-width="2"/>
+        <line x1="32" y1="44" x2="32" y2="60" stroke="#3640F5" stroke-width="2"/>
+        <line x1="4" y1="32" x2="20" y2="32" stroke="#3640F5" stroke-width="2"/>
+        <line x1="44" y1="32" x2="60" y2="32" stroke="#3640F5" stroke-width="2"/>
+      </svg>
+      <div class="wordmark">
+        <div class="name">Oftalmos Day Hospital</div>
+        <div class="sub">Piracicaba · São Paulo</div>
+      </div>
+    </div>
+
+    <p class="eyebrow">Cronograma de conteúdo · Redes sociais</p>
+    <h1>Doenças de Retina</h1>
+    <p class="desc">Planejamento de postagens educativas para Instagram, com foco em gerar consciência sobre a saúde da retina — sem promessa de resultado, em conformidade com as diretrizes do CFM.</p>
+
+    <div class="meta-strip">
+      <span class="pill">Período: <b>17/08 – 23/09/2026</b></span>
+      <span class="pill">Ritmo: <b>2 posts/semana</b> (seg · qua)</span>
+      <span class="pill"><b>12</b> postagens</span>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <section class="schedule">
+    <p class="month-label">Agosto — Setembro 2026</p>
+
+    <article class="post">
+      <div class="post-top">
+        <span class="date-badge">17/08</span><span class="weekday">segunda-feira</span><span class="type-badge video">Vídeo</span>
+      </div>
+      <h3>Doença de retina só dá em idoso?</h3>
+      <div class="legend">Achou que problema de retina era coisa de idoso?
+
+Doenças como descolamento de retina e retinopatia diabética podem afetar qualquer fase da vida — inclusive pessoas jovens, principalmente quem tem miopia alta ou diabetes. Idade é só um dos fatores de risco, não uma garantia de segurança.
+
+Já ouviu falar de alguém jovem com problema de retina? Conta aqui nos comentários.<span class="tags">#saúdeocular #retina #oftalmologia #oftalmosdayhospital #piracicaba</span></div>
+    </article>
+
+    <article class="post">
+      <div class="post-top">
+        <span class="date-badge">19/08</span><span class="weekday">quarta-feira</span><span class="type-badge video">Vídeo</span>
+      </div>
+      <h3>Os sinais que a retina manda antes de doer</h3>
+      <div class="legend">A retina quase nunca dói — mas ela avisa.
+
+Moscas volantes (aqueles pontinhos que "flutuam" na visão), flashes de luz repentinos e visão embaçada em uma área específica podem ser sinais de alerta. Ignorar esses sinais é o que transforma um problema tratável em uma urgência.
+
+Guarda esse post — pode ser útil um dia.<span class="tags">#retina #saúdeocular #sinaisdealerta #oftalmologia #oftalmosdayhospital</span></div>
+    </article>
+
+    <article class="post">
+      <div class="post-top">
+        <span class="date-badge">24/08</span><span class="weekday">segunda-feira</span><span class="type-badge foto">Foto</span>
+      </div>
+      <h3>Piracicaba tem um novo hospital de olhos</h3>
+      <div class="legend">Piracicaba tem um novo hospital de olhos.
+
+O Oftalmos Day Hospital nasceu com um propósito: reunir estrutura completa, tecnologia avançada e uma equipe grande e especializada em um único lugar, oferecendo cuidado ocular do diagnóstico à cirurgia.
+
+Já conhece o novo hospital de olhos da cidade? Vem conhecer de perto.<span class="tags">#oftalmosdayhospital #piracicaba #hospitaldeolhos #oftalmologia</span></div>
+    </article>
+
+    <article class="post">
+      <div class="post-top">
+        <span class="date-badge">26/08</span><span class="weekday">quarta-feira</span><span class="type-badge video">Vídeo</span>
+      </div>
+      <h3>Diabetes e a visão: o exame que muita gente esquece</h3>
+      <div class="legend">Quem tem diabetes sabe cuidar da glicose. Mas e da retina?
+
+A retinopatia diabética é uma das principais causas de perda de visão em pessoas com diabetes — e, no início, não costuma dar nenhum sintoma. O exame de fundo de olho anual é a forma mais simples de identificar o problema antes que ele avance.
+
+Marca aqui alguém que tem diabetes e precisa lembrar disso.<span class="tags">#diabetes #retinopatiadiabetica #saúdeocular #oftalmologia #oftalmosdayhospital</span></div>
+    </article>
+
+    <article class="post">
+      <div class="post-top">
+        <span class="date-badge">31/08</span><span class="weekday">segunda-feira</span><span class="type-badge video">Vídeo</span>
+      </div>
+      <h3>Como é (de verdade) o exame que mapeia sua retina</h3>
+      <div class="legend">Rápido, sem dor e revela detalhes que um exame comum não mostra.
+
+A tomografia de coerência óptica (OCT) faz um verdadeiro "mapa" da retina, camada por camada, em poucos minutos. É um dos exames mais importantes pra identificar alterações antes que causem sintomas.
+
+Já fez algum exame assim? Conta aqui como foi.<span class="tags">#examedevista #oct #retina #tecnologia #oftalmosdayhospital</span></div>
+    </article>
+
+    <article class="post">
+      <div class="post-top">
+        <span class="date-badge">02/09</span><span class="weekday">quarta-feira</span><span class="type-badge foto">Foto</span>
+      </div>
+      <h3>Tecnologia de ponta, do outro lado do consultório</h3>
+      <div class="legend">Tecnologia de ponta, do outro lado do consultório.
+
+O Oftalmos Day Hospital conta com equipamentos modernos de diagnóstico, capazes de identificar alterações na retina com precisão — parte do compromisso de oferecer um cuidado ocular completo em Piracicaba.
+
+Curioso pra saber mais sobre nossa estrutura? Fica de olho nos próximos posts.<span class="tags">#oftalmosdayhospital #tecnologia #diagnostico #piracicaba</span></div>
+    </article>
+
+    <article class="post">
+      <div class="post-top">
+        <span class="date-badge">07/09</span><span class="weekday">segunda-feira</span><span class="type-badge video">Vídeo</span>
+      </div>
+      <h3>A "mancha amarela" que rouba a visão central</h3>
+      <div class="legend">Ela tem até apelido popular: mancha amarela.
+
+A degeneração macular relacionada à idade (DMRI) afeta a região central da retina, responsável por detalhes como ler e reconhecer rostos. É uma das principais causas de perda de visão após os 60 anos — mas o diagnóstico precoce muda o rumo da história.
+
+Já ouviu falar da DMRI? Deixa sua dúvida aqui embaixo.<span class="tags">#dmri #manchaamarela #retina #saúdeocular #oftalmosdayhospital</span></div>
+    </article>
+
+    <article class="post">
+      <div class="post-top">
+        <span class="date-badge">09/09</span><span class="weekday">quarta-feira</span><span class="type-badge video">Vídeo</span>
+      </div>
+      <h3>O tratamento que estabiliza a mancha amarela</h3>
+      <div class="legend">Hoje existe tratamento pra frear o avanço da DMRI.
+
+As injeções intravítreas são uma das formas mais eficazes de tratar a degeneração macular relacionada à idade, ajudando a estabilizar — e em alguns casos até melhorar — a visão central. O acompanhamento é feito de perto, com aplicações programadas.
+
+Comenta "quero saber" se você quer entender melhor como funciona esse tratamento.<span class="tags">#dmri #tratamento #retina #oftalmologia #oftalmosdayhospital</span></div>
+    </article>
+
+    <article class="post">
+      <div class="post-top">
+        <span class="date-badge">14/09</span><span class="weekday">segunda-feira</span><span class="type-badge video">Vídeo</span>
+      </div>
+      <h3>Cirurgia de retina é arriscada?</h3>
+      <div class="legend">Vitrectomia: o nome assusta, o procedimento evoluiu muito.
+
+A vitrectomia é a cirurgia usada em casos como descolamento de retina e hemorragia vítrea. Com as técnicas atuais — minimamente invasivas, com microincisões — o procedimento se tornou mais seguro e com recuperação mais tranquila do que muita gente imagina.
+
+Se você tem medo desse procedimento, comenta aqui o que te preocupa.<span class="tags">#vitrectomia #cirurgiaderetina #oftalmologia #oftalmosdayhospital #piracicaba</span></div>
+    </article>
+
+    <article class="post">
+      <div class="post-top">
+        <span class="date-badge">16/09</span><span class="weekday">quarta-feira</span><span class="type-badge foto">Foto</span>
+      </div>
+      <h3>Cirurgia de olhos sem passar a noite no hospital</h3>
+      <div class="legend">Cirurgia de olhos sem precisar passar a noite no hospital.
+
+No formato day hospital, o paciente é internado, operado e recebe alta no mesmo dia, com todo o suporte da equipe especializada do Oftalmos. Mais conforto, mais praticidade, sem abrir mão da segurança.
+
+Já conhecia esse formato de atendimento? Conta aqui.<span class="tags">#oftalmosdayhospital #dayhospital #piracicaba #cirurgia</span></div>
+    </article>
+
+    <article class="post">
+      <div class="post-top">
+        <span class="date-badge">21/09</span><span class="weekday">segunda-feira</span><span class="type-badge video">Vídeo</span>
+      </div>
+      <h3>Descolamento de retina: os sinais que pedem pressa</h3>
+      <div class="legend">Descolamento de retina é uma urgência oftalmológica de verdade.
+
+Uma "cortina" cobrindo parte do campo de visão, aumento repentino de moscas volantes ou flashes de luz intensos são sinais que pedem avaliação imediata. Quanto mais rápido o atendimento, maior a chance de preservar a visão.
+
+Guarda esse post — e não hesite em procurar ajuda se notar algum desses sinais.<span class="tags">#descolamentoderetina #urgencia #saúdeocular #oftalmosdayhospital #piracicaba</span></div>
+    </article>
+
+    <article class="post">
+      <div class="post-top">
+        <span class="date-badge">23/09</span><span class="weekday">quarta-feira</span><span class="type-badge foto">Foto</span>
+      </div>
+      <h3>Sua retina merece atenção, mesmo sem sintomas</h3>
+      <div class="legend">Sua retina merece atenção, mesmo sem sintomas.
+
+Boa parte das doenças de retina não dá sinal nenhum no início — o exame preventivo é a forma mais segura de cuidar da sua visão a longo prazo. O Oftalmos Day Hospital está em Piracicaba, pronto para te receber.
+
+Bora agendar aquele exame que você vem adiando?<span class="tags">#oftalmosdayhospital #examepreventivo #retina #piracicaba #saúdeocular</span></div>
+    </article>
+  </section>
+
+  <footer class="doc-foot">
+    <p>Conteúdo educativo, produzido em conformidade com a Resolução CFM 2.336/2023 — sem promessa de resultado ou sensacionalismo.</p>
+    <div class="brandline"><span class="dot"></span> Oftalmos Day Hospital · Piracicaba/SP</div>
+  </footer>
+</div>
