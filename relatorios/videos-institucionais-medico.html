@@ -1,0 +1,317 @@
+<title>Oftalmos Day Hospital — Roteiros de Gravação · Vídeos Institucionais com Médico</title>
+<style>
+  :root {
+    --ink: #12153A;
+    --ink-2: #1B1F55;
+    --blue: #3640F5;
+    --blue-deep: #262FC7;
+    --blue-tint: #EAEBFD;
+    --amber: #B85A1F;
+    --amber-tint: #FBEEE3;
+    --paper: #FAFAFE;
+    --surface: #FFFFFF;
+    --border: #E3E4F5;
+    --text-soft: #565B82;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0; background: var(--paper); color: var(--ink);
+    font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  body { padding-bottom: 5rem; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 1.5rem; }
+
+  h1, h2, h3, .serif {
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    text-wrap: balance; margin: 0;
+  }
+
+  .hero { background: var(--ink); color: #F1F2FD; padding: 4.5rem 0 3.5rem; position: relative; overflow: hidden; }
+  .hero .wrap { position: relative; z-index: 1; }
+  .mark { display: flex; align-items: center; gap: 1.6rem; margin-bottom: 2.8rem; }
+  .mark svg { flex: none; }
+  .wordmark { line-height: 1; }
+  .wordmark .name { font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif; font-weight: 800; font-size: 1.7rem; letter-spacing: -0.01em; color: #FFFFFF; }
+  .wordmark .sub { font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--blue); margin-top: 0.35rem; }
+
+  .hero .eyebrow { font-family: "Iowan Old Style", Palatino, Georgia, serif; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--blue); margin: 0 0 0.9rem; }
+  .hero h1 { font-size: clamp(1.8rem, 4.4vw, 2.6rem); color: #FFFFFF; line-height: 1.18; max-width: 26ch; }
+  .hero .desc { color: #C4C7F9; font-size: 1.02rem; margin-top: 0.9rem; max-width: 56ch; line-height: 1.6; }
+
+  .meta-strip { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 2.2rem; }
+  .meta-strip .pill { font-size: 0.8rem; padding: 0.4rem 0.85rem; border-radius: 999px; background: rgba(54,64,245,0.16); border: 1px solid rgba(54,64,245,0.42); color: #DCDEFB; }
+  .meta-strip .pill b { color: #FFFFFF; }
+
+  .callout { margin: 2.5rem 0 0; padding: 1.1rem 1.3rem; border-radius: 10px; background: var(--blue-tint); border: 1px solid var(--border); color: var(--text-soft); font-size: 0.92rem; line-height: 1.6; }
+  .callout b { color: var(--blue-deep); }
+  .callout.pending { background: var(--amber-tint); }
+  .callout.pending b { color: var(--amber); }
+  .callout + .callout { margin-top: 0.8rem; }
+
+  section.legend-key { padding: 2rem 0 0; }
+  .key-row { display: flex; flex-wrap: wrap; gap: 1.2rem; font-size: 0.85rem; color: var(--text-soft); }
+  .key-row .k { display: flex; align-items: center; gap: 0.5rem; }
+  .swatch { width: 14px; height: 14px; border-radius: 4px; flex: none; }
+  .swatch.spoken { background: var(--surface); border: 1px solid var(--border); }
+  .swatch.guide { background: var(--blue-tint); border: 1px dashed var(--blue); }
+  .swatch.placeholder { color: var(--amber); font-weight: 700; }
+
+  section.schedule { padding: 1.5rem 0 3rem; }
+  article.post { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--blue); border-radius: 4px; padding: 1.6rem 1.8rem; margin-bottom: 1.4rem; }
+  .post-top { display: flex; align-items: baseline; gap: 0.9rem; flex-wrap: wrap; margin-bottom: 0.4rem; }
+  .num-badge { font-family: "Iowan Old Style", Palatino, Georgia, serif; font-weight: 600; font-size: 0.85rem; color: var(--blue-deep); background: var(--blue-tint); padding: 0.2rem 0.6rem; border-radius: 4px; }
+  .approach { font-size: 0.8rem; color: var(--text-soft); margin-left: auto; }
+  .post h3 { font-size: 1.18rem; color: var(--ink); margin-top: 0.3rem; }
+  .field-label { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-soft); margin: 1rem 0 0.4rem; font-weight: 600; }
+  .field-label:first-of-type { margin-top: 0.9rem; }
+  .cenario { color: var(--text-soft); font-size: 0.94rem; line-height: 1.6; margin: 0; }
+
+  .script { display: flex; flex-direction: column; gap: 0.6rem; margin-top: 0.3rem; }
+  .beat { border: 1px solid var(--border); border-radius: 8px; padding: 0.75rem 0.95rem; }
+  .beat .beat-top { display: flex; align-items: baseline; gap: 0.6rem; margin-bottom: 0.35rem; flex-wrap: wrap; }
+  .beat .beat-name { font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-soft); }
+  .beat .cam { font-size: 0.76rem; color: var(--text-soft); font-style: italic; }
+  .beat p { margin: 0; line-height: 1.6; color: var(--ink); font-size: 0.95rem; }
+  .beat.spoken { border-left: 3px solid var(--ink); }
+  .beat.guide { border: 1px dashed var(--blue); background: var(--blue-tint); }
+  .beat.guide p { color: var(--blue-deep); }
+  .beat.guide .beat-name { color: var(--blue-deep); }
+  .beat.cta { border-left: 3px solid var(--blue); }
+  .ph { color: var(--amber); font-weight: 700; }
+
+  .legend { color: var(--text-soft); font-size: 0.94rem; line-height: 1.7; margin-top: 1rem; max-width: 66ch; white-space: pre-line; }
+  .legend .tags { display: block; margin-top: 0.5rem; color: var(--blue-deep); font-size: 0.88rem; }
+
+  footer.doc-foot { padding-top: 2.2rem; margin-top: 1rem; border-top: 1px solid var(--border); color: var(--text-soft); font-size: 0.85rem; line-height: 1.6; }
+  footer.doc-foot .brandline { display: flex; align-items: center; gap: 0.6rem; margin-top: 1rem; font-family: "Iowan Old Style", Palatino, Georgia, serif; color: var(--ink-2); font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; }
+  footer.doc-foot .brandline .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--blue); }
+
+  a.back-link { display: inline-block; margin-top: 1.5rem; color: var(--blue); font-size: 0.88rem; text-decoration: none; }
+  a.back-link:hover { text-decoration: underline; }
+
+  @media (max-width: 640px) {
+    .hero { padding: 3.2rem 0 2.6rem; }
+    article.post { padding: 1.3rem 1.2rem; }
+    .mark { gap: 1rem; }
+    .mark svg { width: 52px; height: 52px; }
+    .approach { margin-left: 0; }
+  }
+</style>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="mark">
+      <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <ellipse cx="32" cy="32" rx="26" ry="14" stroke="#3640F5" stroke-width="2"/>
+        <circle cx="32" cy="32" r="10" stroke="#3640F5" stroke-width="2"/>
+        <circle cx="32" cy="32" r="3.2" fill="#3640F5"/>
+        <line x1="32" y1="4" x2="32" y2="20" stroke="#3640F5" stroke-width="2"/>
+        <line x1="32" y1="44" x2="32" y2="60" stroke="#3640F5" stroke-width="2"/>
+        <line x1="4" y1="32" x2="20" y2="32" stroke="#3640F5" stroke-width="2"/>
+        <line x1="44" y1="32" x2="60" y2="32" stroke="#3640F5" stroke-width="2"/>
+      </svg>
+      <div class="wordmark">
+        <div class="name">Oftalmos Day Hospital</div>
+        <div class="sub">Piracicaba · São Paulo</div>
+      </div>
+    </div>
+
+    <p class="eyebrow">Série especial · Vídeos institucionais</p>
+    <h1>Roteiros de gravação com médico</h1>
+    <p class="desc">4 roteiros pra gravação do médico falando direto pra câmera, apresentando o hospital e os procedimentos oferecidos — conteúdo institucional, não atrelado a um mês específico do cronograma.</p>
+
+    <div class="meta-strip">
+      <span class="pill">Formato: <b>médico de rosto na câmera</b></span>
+      <span class="pill"><b>4</b> roteiros</span>
+      <span class="pill">Tom: <b>formal</b></span>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="callout pending">
+    <b>Em aberto — preencher antes de gravar:</b> nome do médico, especialidade e CRM/RQE. Aparecem marcados como <span class="ph">[NOME DO MÉDICO]</span>, <span class="ph">[ESPECIALIDADE]</span> e <span class="ph">[CRM/RQE]</span> ao longo dos roteiros. O CRM/RQE também deve aparecer como legenda fixa na tela durante o vídeo, já que o médico aparece de rosto.
+  </div>
+  <div class="callout">
+    <b>Bloco de procedimentos (destacado em azul, tracejado):</b> não é fala pronta — é uma instrução aberta pro médico falar com as próprias palavras sobre os procedimentos do hospital.
+  </div>
+  <div class="callout">
+    <b>Compliance (CFM 2.336/2023):</b> conteúdo institucional/genérico, sem promessa de resultado, sem comparação com outros serviços, sem depoimento de paciente.
+  </div>
+
+  <section class="legend-key">
+    <div class="key-row">
+      <span class="k"><span class="swatch spoken"></span> Fala sugerida (texto pronto)</span>
+      <span class="k"><span class="swatch guide"></span> Guia aberto (o médico fala com as próprias palavras)</span>
+      <span class="k"><span class="ph">[texto]</span> Placeholder a preencher</span>
+    </div>
+  </section>
+
+  <section class="schedule">
+
+    <article class="post">
+      <div class="post-top">
+        <span class="num-badge">Roteiro 01</span>
+        <span class="approach">Abordagem: apresentação direta</span>
+      </div>
+      <h3>Quem somos e o que fazemos</h3>
+      <p class="field-label">Cenário sugerido</p>
+      <p class="cenario">Consultório ou recepção do hospital, bem iluminado, com a identidade visual do Oftalmos ao fundo. Médico de jaleco, olhando direto pra câmera, plano médio.</p>
+      <p class="field-label">Roteiro guiado</p>
+      <div class="script">
+        <div class="beat spoken">
+          <div class="beat-top"><span class="beat-name">Bloco 1 · Gancho</span><span class="cam">Plano médio, olhando pra câmera</span></div>
+          <p>"Você sabe a quem recorrer quando precisa de um exame oftalmológico, de uma cirurgia de catarata ou de acompanhamento da retina?"</p>
+        </div>
+        <div class="beat spoken">
+          <div class="beat-top"><span class="beat-name">Bloco 2 · Apresentação</span></div>
+          <p>"Meu nome é <span class="ph">[NOME DO MÉDICO]</span>, sou <span class="ph">[ESPECIALIDADE]</span> e integro o corpo clínico do Oftalmos Day Hospital."</p>
+        </div>
+        <div class="beat guide">
+          <div class="beat-top"><span class="beat-name">Bloco 3 · Guia aberto</span></div>
+          <p>[Nesse momento, fale sobre os procedimentos realizados pelo hospital — pode citar, por exemplo, catarata, cirurgia refrativa, retina e vítreo, oftalmologia pediátrica e estrabismo.]</p>
+        </div>
+        <div class="beat spoken">
+          <div class="beat-top"><span class="beat-name">Bloco 4 · Posicionamento</span></div>
+          <p>"Atualmente, somos um dos hospitais oftalmológicos mais completos e mais bem equipados da região de Piracicaba."</p>
+        </div>
+        <div class="beat spoken cta">
+          <div class="beat-top"><span class="beat-name">Bloco 5 · CTA</span></div>
+          <p>"Será um prazer recebê-lo em nossa unidade. Entre em contato conosco pelo link disponível em nossa biografia e conheça de perto a nossa estrutura."</p>
+        </div>
+      </div>
+      <p class="field-label">Legenda</p>
+      <div class="legend">Você sabe a quem recorrer quando o assunto é saúde ocular?
+
+No Oftalmos Day Hospital, reunimos estrutura completa e uma equipe especializada para conduzir cada etapa do cuidado — do exame de rotina ao procedimento cirúrgico.
+
+Deseja conhecer nossa estrutura de perto? O link para entrar em contato está em nossa biografia.<span class="tags">#oftalmosdayhospital #piracicaba #oftalmologia #institucional</span></div>
+    </article>
+
+    <article class="post">
+      <div class="post-top">
+        <span class="num-badge">Roteiro 02</span>
+        <span class="approach">Abordagem: estrutura nova</span>
+      </div>
+      <h3>Um hospital pensado do zero</h3>
+      <p class="field-label">Cenário sugerido</p>
+      <p class="cenario">Sala de exames ou corredor com equipamentos visíveis ao fundo (desfocados). Plano médio, luz natural se possível.</p>
+      <p class="field-label">Roteiro guiado</p>
+      <div class="script">
+        <div class="beat spoken">
+          <div class="beat-top"><span class="beat-name">Bloco 1 · Gancho</span><span class="cam">Plano médio, olhando pra câmera</span></div>
+          <p>"Você sabia que a oftalmologia contemporânea vai muito além da simples medição do grau dos óculos?"</p>
+        </div>
+        <div class="beat spoken">
+          <div class="beat-top"><span class="beat-name">Bloco 2 · Apresentação</span></div>
+          <p>"Meu nome é <span class="ph">[NOME DO MÉDICO]</span>, sou <span class="ph">[ESPECIALIDADE]</span> e atuo no Oftalmos Day Hospital, em Piracicaba."</p>
+        </div>
+        <div class="beat guide">
+          <div class="beat-top"><span class="beat-name">Bloco 3 · Guia aberto</span></div>
+          <p>[Nesse momento, fale sobre os procedimentos realizados pelo hospital, dando destaque pra estrutura e tecnologia usada em cada um deles.]</p>
+        </div>
+        <div class="beat spoken">
+          <div class="beat-top"><span class="beat-name">Bloco 4 · Posicionamento</span></div>
+          <p>"Desde a nossa inauguração em Piracicaba, construímos uma estrutura concebida para oferecer, em um único local, desde a consulta até o procedimento cirúrgico."</p>
+        </div>
+        <div class="beat spoken cta">
+          <div class="beat-top"><span class="beat-name">Bloco 5 · CTA</span></div>
+          <p>"Se desejar conhecer essa estrutura de perto, entre em contato conosco pelo link disponível em nossa biografia. Será um prazer recebê-lo."</p>
+        </div>
+      </div>
+      <p class="field-label">Legenda</p>
+      <div class="legend">A oftalmologia vai muito além de medir o grau.
+
+O Oftalmos Day Hospital foi estruturado desde o início para oferecer, em um único local, desde a consulta de rotina até o procedimento cirúrgico — com tecnologia dedicada a cada etapa do cuidado.
+
+Deseja conhecer essa estrutura de perto? Link em nossa biografia.<span class="tags">#oftalmosdayhospital #piracicaba #tecnologia #institucional</span></div>
+    </article>
+
+    <article class="post">
+      <div class="post-top">
+        <span class="num-badge">Roteiro 03</span>
+        <span class="approach">Abordagem: amplitude de atendimento</span>
+      </div>
+      <h3>Cuidado pra cada fase da vida</h3>
+      <p class="field-label">Cenário sugerido</p>
+      <p class="cenario">Recepção ou sala de espera, ambiente acolhedor. Plano médio.</p>
+      <p class="field-label">Roteiro guiado</p>
+      <div class="script">
+        <div class="beat spoken">
+          <div class="beat-top"><span class="beat-name">Bloco 1 · Gancho</span><span class="cam">Plano médio, olhando pra câmera</span></div>
+          <p>"Sabia que é possível encontrar atendimento oftalmológico especializado tanto para crianças quanto para pacientes acima de 60 anos — tudo em um só lugar?"</p>
+        </div>
+        <div class="beat spoken">
+          <div class="beat-top"><span class="beat-name">Bloco 2 · Apresentação</span></div>
+          <p>"Meu nome é <span class="ph">[NOME DO MÉDICO]</span>, sou <span class="ph">[ESPECIALIDADE]</span> e integro a equipe médica do Oftalmos Day Hospital."</p>
+        </div>
+        <div class="beat guide">
+          <div class="beat-top"><span class="beat-name">Bloco 3 · Guia aberto</span></div>
+          <p>[Nesse momento, fale sobre os procedimentos realizados pelo hospital, destacando a variedade — de exames de rotina a cirurgias mais complexas, pra diferentes idades e necessidades.]</p>
+        </div>
+        <div class="beat spoken">
+          <div class="beat-top"><span class="beat-name">Bloco 4 · Posicionamento</span></div>
+          <p>"Atendemos praticamente todas as necessidades oftalmológicas, contando com uma equipe ampla e especializada."</p>
+        </div>
+        <div class="beat spoken cta">
+          <div class="beat-top"><span class="beat-name">Bloco 5 · CTA</span></div>
+          <p>"Independentemente da sua necessidade, entre em contato conosco pelo link em nossa biografia. Nossa equipe estará à disposição para orientá-lo da melhor forma."</p>
+        </div>
+      </div>
+      <p class="field-label">Legenda</p>
+      <div class="legend">Da infância à terceira idade, cuidado oftalmológico para cada fase da vida.
+
+No Oftalmos Day Hospital, contamos com uma equipe ampla e especializada para atender diferentes necessidades — de exames de rotina a cirurgias mais complexas.
+
+Qual é a sua necessidade? Entre em contato conosco pelo link em nossa biografia.<span class="tags">#oftalmosdayhospital #piracicaba #oftalmologia #institucional</span></div>
+    </article>
+
+    <article class="post">
+      <div class="post-top">
+        <span class="num-badge">Roteiro 04</span>
+        <span class="approach">Abordagem: diferencial humano</span>
+      </div>
+      <h3>O que move a nossa equipe</h3>
+      <p class="field-label">Cenário sugerido</p>
+      <p class="cenario">Consultório, médico próximo à câmera, tom de voz mais próximo/calmo. Plano fechado (rosto e ombros).</p>
+      <p class="field-label">Roteiro guiado</p>
+      <div class="script">
+        <div class="beat spoken">
+          <div class="beat-top"><span class="beat-name">Bloco 1 · Gancho</span><span class="cam">Plano fechado, tom próximo</span></div>
+          <p>"Antes de qualquer exame ou procedimento cirúrgico, há algo que levamos muito a sério em nossa instituição."</p>
+        </div>
+        <div class="beat spoken">
+          <div class="beat-top"><span class="beat-name">Bloco 2 · Apresentação</span></div>
+          <p>"Meu nome é <span class="ph">[NOME DO MÉDICO]</span>, sou <span class="ph">[ESPECIALIDADE]</span> do Oftalmos Day Hospital, em Piracicaba."</p>
+        </div>
+        <div class="beat guide">
+          <div class="beat-top"><span class="beat-name">Bloco 3 · Guia aberto</span></div>
+          <p>[Nesse momento, fale sobre os procedimentos realizados pelo hospital, encerrando com o compromisso da equipe em acolher bem cada paciente.]</p>
+        </div>
+        <div class="beat spoken">
+          <div class="beat-top"><span class="beat-name">Bloco 4 · Posicionamento</span></div>
+          <p>"Cuidar da visão de um paciente é uma responsabilidade significativa — e é esse compromisso que orienta o trabalho da nossa equipe todos os dias."</p>
+        </div>
+        <div class="beat spoken cta">
+          <div class="beat-top"><span class="beat-name">Bloco 5 · CTA</span></div>
+          <p>"Se você também merece esse cuidado, entre em contato conosco pelo link em nossa biografia. Será um prazer recebê-lo em nossa unidade."</p>
+        </div>
+      </div>
+      <p class="field-label">Legenda</p>
+      <div class="legend">Antes de qualquer exame ou procedimento cirúrgico, há algo que levamos muito a sério: o acolhimento.
+
+Cuidar da visão de um paciente é uma responsabilidade significativa — e é esse compromisso que orienta a equipe do Oftalmos Day Hospital todos os dias.
+
+Você também merece esse cuidado. Link em nossa biografia para agendamento.<span class="tags">#oftalmosdayhospital #piracicaba #cuidado #institucional</span></div>
+    </article>
+
+  </section>
+
+  <a class="back-link" href="../index.html">&larr; Voltar pros cronogramas mensais</a>
+
+  <footer class="doc-foot">
+    <p>Roteiros de gravação institucional com médico. Conteúdo genérico, sem promessa de resultado ou comparação, em conformidade com a Resolução CFM 2.336/2023. Preencher nome, especialidade e CRM/RQE antes de gravar.</p>
+    <div class="brandline"><span class="dot"></span> Oftalmos Day Hospital · Piracicaba/SP</div>
+  </footer>
+</div>
